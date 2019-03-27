@@ -1,26 +1,29 @@
-<div style="width: 50%;"> 
-    <h3>Register new Lead:</h3>
-    <hr>
-    <div class="box-1">
-        <label>Lastname: </label>
-        <input type="text" id="lastname">
+<div style="display: grid;">
+    <div style="grid-column: 1/2;"> 
+        <h3>Register new Lead:</h3>
+        <hr>
+        <div class="box-1">
+            <label>Lastname: </label>
+            <input type="text" id="lastname">
+        </div>
+        <br>
+        <div>
+            <label>Company: </label>
+            <input type="text" id="company">
+        </div>
+        <br>
+        <button onclick="createLead();">New</button>
+        <hr>
+        <hr>
     </div>
-    <br>
-    <div>
-        <label>Company: </label>
-        <input type="text" id="company">
+    
+    <div style="grid-column: 1/2;">
+        <p>"SF Iframe"</p>
+        <iframe src="https://felix-cat-developer-edition.ap4.force.com" title="iframe example 1" width="50%" height="300">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
     </div>
-    <br>
-    <button onclick="createLead();">New</button>
-    <hr>
-    <hr>
-</div>
-  <div>  
-<p>"SF Iframe"</p>
-<iframe src="https://felix-cat-developer-edition.ap4.force.com" title="iframe example 1" width="50%" height="300">
-  <p>Your browser does not support iframes.</p>
-</iframe>
- </div>
+    
     <script>
         function createLead() {          
             var lastName = document.getElementById('lastname').value;
