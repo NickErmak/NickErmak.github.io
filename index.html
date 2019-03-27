@@ -32,7 +32,9 @@
             var url = "https://felix-cat-developer-edition.ap4.force.com/services/apexrest/newlead";
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
-                alert(this.responseText);               
+                if (this.readyState === 4) {
+                    alert(this.responseText); 
+                }
             });
             xhr.open("POST", url, true);
             xhr.setRequestHeader("content-type", "application/json; charset=UTF-8");
