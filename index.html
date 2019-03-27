@@ -1,10 +1,9 @@
-    <div class="blocks">
-          <h3 id='result'></h3>
+    <div class="blocks">      
         <h3>Register new Lead:</h3>
         <hr>
         <div class="box-1">
             <label>Lastname</label>
-            <input type="text" id="lastName">
+            <input type="text" id="lastname">
         </div>
         <br>
         <div>
@@ -23,26 +22,17 @@
 </iframe>
 
     <script>
-        function createLead(){
-            alert('createLead');
-            var lastName = document.getElementById('lastName').value;
+        function createLead() {          
+            var lastName = document.getElementById('lastname').value;
             var company = document.getElementById('company').value;
-                        var data = JSON.stringify({
+            var data = JSON.stringify({
                 "lastname": lastName,
                 "company": company
             });
             var url = "https://felix-cat-developer-edition.ap4.force.com/services/apexrest/newlead";
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("readystatechange", function () {
-                if (this.readyState === 4) {
-                    if(this.responseText == 'OK') {
-                        document.getElementById("result").innerHTML = setUsername + ' is now registered';
-                    }
-                    if(this.responseText == 'Bad Request') {
-                        document.getElementById("result").innerHTML = setUsername + ' exists already';
-                    }
-                        console.log(this.responseText);
-                }
+                alert(this.responseText);               
             });
             xhr.open("POST", url, true);
             xhr.setRequestHeader("content-type", "application/json; charset=UTF-8");
