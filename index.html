@@ -1,26 +1,43 @@
-<h3>Register new Lead:</h3>
-<hr>
-<div>
-    <label>Lastname: </label>
-    <input type="text" id="lastname">
-</div>
-<br>
-<div>
-    <label>Company: </label>
-    <input type="text" id="company">
-</div>
-<br>
-<button onclick="createLead();">New</button>
-<hr>
-<hr>
-</div> 
+<html lang="en">
+    <head>
+        <meta name="salesforce-community" content="https://virsa-developer-edition.ap4.force.com/aloha">
+        <meta name="salesforce-client-id" content="3MVG9YDQS5WtC11oEOG9C62a.YtxbtbFRUxhRdi1bXGGEkcq5Wmhsia1.0ELikiukP2BTSmLH7Dqf8TXfOKka
+">
+        <meta name="salesforce-redirect-uri" content="https://nickermak.github.io/_callback.php">
+        <meta name="salesforce-mode" content="modal">
+        <meta name="salesforce-target" content="#sign-in-link">
+        <meta name="salesforce-save-access-token" content="true">
+        <meta name="salesforce-login-handler" content="onLogin">
+        <meta name="salesforce-logout-handler" content="onLogout">
+        <link href="https://virsa-developer-edition.ap4.force.com/aloha/servlet/servlet.loginwidgetcontroller?type=css" rel="stylesheet" type="text/css" /> 
+        <script src="https://virsa-developer-edition.ap4.force.com/aloha/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async defer></script>     
+    </head>
 
-<div>
-    <p>"SF Iframe"</p>
-    <iframe src="https://felix-cat-developer-edition.ap4.force.com" title="iframe example 1" width="50%" height="300">
-        <p>Your browser does not support iframes.</p>
-    </iframe>
-</div>
+    <h3>Register new Lead:</h3>
+    <hr>
+    <div>
+        <label>Lastname: </label>
+        <input type="text" id="lastname">
+    </div>
+    <br>
+    <div>
+        <label>Company: </label>
+        <input type="text" id="company">
+    </div>
+    <br>
+    <button onclick="createLead();">New</button>
+    <hr>
+    <hr>
+    </div> 
+
+    <div>
+        <p>"SF Iframe"</p>
+        <iframe src="https://felix-cat-developer-edition.ap4.force.com" title="iframe example 1" width="50%" height="300">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+    </div>
+</html>
+
     
     <script>
         function createLead() {          
